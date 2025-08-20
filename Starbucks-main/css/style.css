@@ -1,0 +1,318 @@
+:root {
+  --colorGeneral: black;
+  --summer: #106e33;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4e8dc;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 40px;
+}
+
+nav {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu_small-device {
+  display: none;
+}
+
+.menu_wrapper {
+  display: flex;
+  gap: 140px;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.menu {
+  display: flex;
+  gap: 92.14px;
+  align-items: center;
+}
+
+.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #606060;
+}
+
+.menu a.active {
+  color: var(--colorGeneral);
+}
+
+.auth {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.sign-in {
+  background-color: var(--colorGeneral);
+  border-radius: 20px;
+  padding: 5px 22px;
+  color: white;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 75px;
+  min-height: calc(100% - 117px);
+}
+
+.snippets {
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.snippets,
+.description {
+  font-size: 1.25rem;
+}
+
+.title {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 80px;
+  margin-bottom: 15px;
+}
+
+.title,
+.description {
+  width: 43.125rem;
+}
+
+.summer {
+  display: inline;
+  color: var(--summer);
+}
+
+.description {
+  color: #5b5b5b;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.order-now {
+  background-color: var(--summer);
+  border: none;
+  border-radius: 30px;
+  padding: 14px 35px;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.social-media {
+  display: flex;
+  width: 10rem;
+  justify-content: space-around;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.social-media a,
+.hero_img img,
+.background img {
+  max-width: 100%;
+  height: auto;
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.background img {
+  display: block;
+  filter: blur(2px);
+}
+
+@media (max-width: 1524px) {
+  nav {
+    gap: 60px;
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .container {
+    max-width: 65rem;
+  }
+  .menu_wrapper {
+    gap: 70px;
+  }
+  .hero {
+    gap: 30px;
+  }
+  .hero_content {
+    font-size: 0.875rem;
+  }
+  .snippets,
+  .description,
+  .order-now {
+    font-size: inherit;
+  }
+  .title,
+  .description {
+    width: 30rem;
+  }
+  .title {
+    font-size: 3.125rem;
+    line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  nav {
+    padding-top: 20px;
+  }
+  .menu_wrapper {
+    font-size: 14px;
+    gap: 50px;
+  }
+  .menu {
+    gap: 45px;
+  }
+  .nav-logo img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  .hero {
+    min-height: calc(100% - 67px);
+  }
+  .hero_img img {
+    width: 16.063rem;
+    height: 23.375rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 25px;
+  }
+  .menu_wrapper {
+    display: none;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .menu_wrapper.active {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 20rem;
+    height: 50vh;
+    background: #23232e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: slideDown 0.6s ease forwards;
+    transition: height 0.6s ease, opacity 0.3s ease;
+    z-index: 100;
+  }
+  .menu {
+    display: inline-grid;
+  }
+  .menu_wrapper a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+    transform: translateX(30px);
+  }
+  .menu_small-device {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 1rem;
+    z-index: 101;
+  }
+  nav {
+    justify-content: space-between;
+    gap: 0px;
+  }
+  .background {
+    right: inherit;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .title,
+  .description {
+    width: 100%;
+  }
+  .order-now,
+  .description {
+    margin-bottom: 20px;
+  }
+  .social-media {
+    width: 8.849rem;
+    height: 1.25rem;
+  }
+  .hero_img {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .title {
+    font-size: 2.5rem;
+    line-height: 45px;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

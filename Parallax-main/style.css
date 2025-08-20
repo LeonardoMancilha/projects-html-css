@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.photo1 {
+    background-image: url(Imagens/Image1.jpg);
+    min-height: 100%;
+   
+}
+
+.photo1 {
+    position: relative;
+    opacity: 0.70;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo2 {
+    background-image: url(Imagens/Image2.jpg);
+    min-height: 50%;
+    opacity: 0.70;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+div {
+    display: block;
+}
+/*
+.photo1, .photo2, .photo3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+*/
+body, html {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+.text .borda {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+}
+
+.image .images {
+    padding: 20px;
+    color: #fff;
+}
+
+.image {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size:27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+.text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.light {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 5px 80px;
+   
+}
+
+.dark {
+    text-align: center;
+    background-color: #282E34;
+    color: #DDDD;
+    padding: 50px 80px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+}
+
+p {
+    display: block;
+    text-indent: 5em;
+}
+
+.photo3 {
+    background-image: url(Imagens/Image3.jpg);
+    min-height: 50%;
+    opacity: 0.70;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media(max-width:568px){
+  .photo1, .photo2, .photo3{
+    background-attachment: scroll;
+  }
+}
+
+@media(max-width:568px){
+    .text .borda {
+        padding: 5px;
+        text-align: center;
+    }
+    p {
+        text-indent: 1.1em;
+    }
+    .dark {
+        padding: 10px;
+        
+    }
+}
+
+/*
+@media (min-width: 768px) {}
+.photo1 {
+    max-width: 920px;
+}
+
+@media (min-width: 576px) {}
+.photo1 {
+    max-width: 620px;
+}
+*/

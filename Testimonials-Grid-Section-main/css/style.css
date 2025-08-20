@@ -1,0 +1,193 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.3rem;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.sr-only {
+    position: absolute;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+.testimonials {
+    margin-top: 5rem;
+}
+
+img {
+    width: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    margin-right: 1.2rem;
+}
+
+.info {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.6rem;
+}
+
+.daniel p,
+.jonathan p,
+.patrick p,
+.daniel p,
+.jonathan p,
+.patrick p,
+span
+ {
+    color: hsl(0, 0%, 81%);
+}
+
+p, span {
+    font-weight: 500;
+}
+
+span {
+    opacity: .5;
+}
+
+p {
+    opacity: .7;
+    line-height: 1.6;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+}
+
+.daniel h2,
+.jonathan h2,
+.patrick h2 {
+    color: hsl(210, 46%, 95%);
+}
+
+.daniel,
+.jonathan,
+.patrick,
+.jeanette,
+.kira {
+    padding: 3rem;
+    max-width: 33rem;
+    margin: 0 auto;
+    border-radius: 7px;
+    margin-bottom: 2rem;
+}
+
+.daniel {
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 10px top 2px;
+    background-size: 11rem;
+    background-color: hsl(263, 55%, 52%);
+}
+
+.jonathan {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.patrick {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.jeanette,
+.kira {
+    box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+}
+
+.jeanette span,
+.kira span {
+    color: hsl(0, 0%, 41%);
+}
+
+.jeanette h2,
+.kira h2 {
+    color: hsl(217, 19%, 35%);
+}
+
+.jeanette p,
+.kira p {
+    color: hsl(0, 0%, 33%);
+}
+
+ .attribution {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+
+  @media (min-width: 50em) {
+      .testimonials {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 2rem;
+          margin: 5rem;
+          
+      }
+
+         .daniel,
+        .jonathan,
+        .patrick,
+        .jeanette,
+        .kira {
+        max-width: 40rem;
+        margin-bottom: 0;
+}
+
+      .kira {
+        grid-column-start: span 2;
+      }
+  }
+
+@media (min-width: 60em) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 118rem;
+        margin: 2rem auto;
+    }
+
+    .daniel,
+    .jonathan,
+    .patrick,
+    .jeanette,
+    .kira {
+    max-width: none;
+    }
+
+    .daniel {
+        grid-column-start: span 2;
+        background-position: right 90px top 0;
+        background-size: 13rem;
+        background-size: 11rem;
+        background-position: right 84px top 2px;
+        
+    }
+
+    .patrick {
+        grid-column-start: span 2;
+    }
+
+    .kira {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}
